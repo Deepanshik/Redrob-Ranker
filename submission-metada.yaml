@@ -3,7 +3,7 @@ team_name: "Deepanshi Khandelwal"
 primary_contact:
   name: "Deepanshi Khandelwal"
   email: "dipanshi159@gmail.com"
-  phone: "+91-XXXXXXXXXX"
+  phone: "+91-9179601417"
 
 team_members:
   - name: "Deepanshi Khandelwal"
@@ -12,7 +12,7 @@ team_members:
 
 github_repo: "https://github.com/Deepanshik/Redrob-Ranker"
 sandbox_link: "https://redrob-ranker-ghdyvc8ojcsm28syn99gse.streamlit.app/"
-reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+reproduce_command: python rank.py --candidates ./data/candidates.jsonl --out ./output/submission.csv
 
 compute:
   platform: "Local CPU"
