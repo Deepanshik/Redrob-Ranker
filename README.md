@@ -140,6 +140,3 @@ The compute constraints require no network access during ranking and ≤5 min on
 
 **Why these weights?**  
 Skills (28%) and experience (22%) are the core fit signals. Semantic (25%) captures implicit matches the rule-based system misses. Availability (15%) implements the JD's explicit instruction to down-weight passive candidates. Location and platform trust are tie-breakers.
-
-## 📄 Presentation Deck
-[View Technical Architecture PDF](docs/Redrob_Ranking_Deck_Final.pdf)
