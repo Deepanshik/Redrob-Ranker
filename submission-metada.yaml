@@ -1,0 +1,51 @@
+team_name: "Deepanshi Khandelwal"
+
+primary_contact:
+  name: "Deepanshi Khandelwal"
+  email: "dipanshi159@gmail.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "Deepanshi Khandelwal"
+    email: "dipanshi159@gmail.com"
+    role: "Solo"
+
+github_repo: "https://github.com/Deepanshik/Redrob-Ranker"
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Local CPU"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.10"
+  os: "Ubuntu 22.04"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude for code review and architecture discussion.
+  No candidate data was fed to any LLM.
+  All ranking logic is deterministic rule-based + TF-IDF (no API calls during ranking).
+
+methodology_summary: |
+  Multi-dimensional CPU-only ranker with 5 scoring components:
+  (1) TF-IDF bigram semantic similarity to JD (25%),
+  (2) Skill quality — proficiency, endorsements, duration, JD match (28%),
+  (3) Experience — YoE, title fit, career trajectory, job stability (22%),
+  (4) Availability — open_to_work, last active, notice period, response rate (15%),
+  (5) Platform trust + location fit (10%).
+  Pre-filters 100K→5K using heuristics; honeypot detection via consistency checks.
+  Runtime: ~12 seconds on CPU. No external API calls or GPU required.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
